@@ -1,0 +1,16 @@
+{
+  
+  "name": "kolab Calculator",
+  "short": "Calculator",
+  
+  "description": "A simple semi-scientific calculator",
+  "author": "Jay Machalani",
+  "version": "1.0",
+  
+  "width": 268,
+  "height": 292,
+  
+  "resizable": false,
+  "aspect": false
+
+}

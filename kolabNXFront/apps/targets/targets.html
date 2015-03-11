@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>kolab Targets</title>
+
+<script type="text/javascript" src="targets.js"></script>
+
+<style>
+html,body{border:0;margin:0;padding:0;overflow:hidden;}
+
+.regular-radio {
+	-webkit-appearance: none;
+	background-color: #FFF;
+	border: 2px solid #333;
+	padding: 7px;
+	border-radius: 50px;
+	display: inline-block;
+	position: relative;
+	outline:0;
+	cursor:pointer;
+}
+
+.regular-radio:checked:after {
+	content: ' ';
+	width: 8px;
+	height: 8px;
+	border-radius: 50px;
+	position: absolute;
+	top: 3px;
+	background: #D93E3E;
+	text-shadow: 0px;
+	left: 3px;
+	font-size: 32px;
+	outline:0;
+}
+
+.regular-radio:checked {
+	background-color: #FFF;
+	color: #99a1a7;
+	border: 2px solid #D93E3E;
+	outline:0;
+}
+
+.regular-radio:active, .regular-radio:checked:active {
+	transform:scale(0.92);
+	outline:0;
+}
+
+body{
+	background:#000;
+	overflow:hidden;overflow:hidden;
+}
+#game{
+	border:0;
+	background:#FFF;
+	padding:16px;overflow:hidden;
+}
+#sub{
+	position:relative;
+	width:335px;
+	height:100px;
+	background:#D93E3E;overflow:hidden;
+}
+#info{
+	float:left;
+	margin-top:2px;overflow:hidden;
+}
+#start{
+	outline:0;
+	width:181px;
+	height:92px;
+	float:left;
+	margin:4px;
+	border:0;
+	background:#A11F1F;
+	cursor:pointer;
+	color:#FFF;
+	font-family:tahoma;overflow:hidden;
+}
+#start:hover{
+	outline:0;
+	opacity:0.9;
+}
+#start:active{
+	outline:0;
+	transform:scale(0.98);
+}
+.title{
+	outline:0;
+	font-family:tahoma;
+	font-size:14px;
+	color:#FFF;
+}
+.field{
+	width:70px;
+	margin-left:4px;
+	color:#333;
+	background:#FFF;
+	border:0;
+	height:24px;
+	padding-left:8px;
+	margin-bottom:2px;overflow:hidden;
+}
+
+</style>
+
+</head>
+
+<body onLoad="checkCookie()">
+
+<form name="dmz">
+<table id="game">
+<tr>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(0)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(1)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(2)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(3)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(4)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(5)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(6)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(7)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(8)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(9)"></td>
+</tr>
+<tr>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(10)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(11)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(12)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(13)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(14)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(15)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(16)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(17)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(18)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(19)"></td>
+</tr>
+<tr>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(20)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(21)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(22)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(23)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(24)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(25)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(26)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(27)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(28)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(29)"></td>
+</tr>
+<tr>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(30)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(31)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(32)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(33)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(34)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(35)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(36)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(37)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(38)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(39)"></td>
+</tr>
+<tr>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(40)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(41)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(42)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(43)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(44)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(45)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(46)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(47)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(48)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(49)"></td>
+</tr>
+<tr>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(50)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(51)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(52)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(53)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(54)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(55)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(56)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(57)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(58)"></td>
+<td align="center" valign="center"><input type="radio" class="regular-radio" onClick="hithead(59)"></td>
+</tr>
+</table></form>
+
+<div id="sub">
+
+<form name="cpanel">
+<input id="start" type="button" name="startstop" value="Start | Stop" onClick="play()">
+<table id="info">
+<tr>
+<td></td>
+<td></td>
+<td align=right class="title">Time</td>
+<td><input class="field" type="text" name="timeleft" size="4" onFocus="this.blur()"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align=right class="title">Score</td>
+<td><input id="score1" class="field" type="text" name="score" size="4" onFocus="this.blur()"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align=right class="title">Hiscore</td>
+<td><input id="hiscore" class="field" type="text" name="score" size="4" onFocus="this.blur()"></td>
+</tr>
+</table>
+</form>
+
+</div>
+
+
+
+
+</body>
+</html>

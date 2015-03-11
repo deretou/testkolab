@@ -1,0 +1,363 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>kolab Tetris</title>
+
+<script type="text/javascript" src="tetris.js"></script>
+
+<style>
+html, body {width: 100%; height: 100%; margin: 0; padding: 0;overflow:hidden; }
+body {
+    background: #FF00FF;
+}
+body, table {
+    font: 10px tahoma;
+    color: #FFF;
+	text-align:left
+}
+
+/*** tetris 168,308 ***/
+
+#tetris {
+    position: relative;
+    width: 353px;
+    height: 462px;
+    background: #ffffff;
+    margin: 0 auto;overflow:hidden;
+}
+
+/*** left ***/
+
+#tetris .left {
+    background: #333;
+    position: absolute;
+    width: 130px;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+}
+#tetris .left h1 {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#tetris .left h1 a {
+    color: #3366CC;
+    text-decoration: none;
+}
+#tetris .left h1 a:hover {
+    color: #FF6600;
+    text-decoration: none;
+}
+
+/* menu */
+
+.menu{
+	margin-left:-30px;
+	margin-top:4px;
+}
+
+#tetris .left .menu {
+    text-align: center;
+}
+#tetris .left input {
+    font: 9px tahoma;
+    color: #FFF;
+    text-transform: uppercase;
+}
+#tetris .left .menu input {
+    width: 90px;
+}
+
+.button{
+	outline:none;
+	border:none;
+	background:#444;
+	padding:8px;
+	margin-bottom:5px;
+	cursor:pointer;
+}
+.button:hover{
+	background:#454545;
+}
+.button:active{
+	transform:scale(0.98);
+}
+
+/* keyboard */
+
+#tetris .left .keyboard {
+    position: absolute;
+    top: 163px;
+    left: 32px;
+    width: 85px;
+    height: 55px;
+    overflow: visible;
+    display: none;
+}
+#tetris .left .keyboard input {
+    font: 11px tahoma;
+    width: 25px;
+    height: 25px;
+    padding-bottom: 2px;
+    text-transform: none;
+}
+* html #tetris .left .keyboard input {
+    padding-left: 1px;
+}
+#tetris .left .keyboard .up {
+    position: absolute;
+    left: 30px;
+    top: 0px;
+    width: 30px;
+    height: 30px;
+}
+#tetris .left .keyboard .up input {
+    font: 15px tahoma;
+    padding-top: 3px;
+}
+#tetris .left .keyboard .down {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    width: 30px;
+    height: 30px;
+}
+#tetris .left .keyboard .down input {
+    font: 14px tahoma;
+}
+#tetris .left .keyboard .left {
+    position: absolute;
+    left: 0px;
+    top: 30px;
+    width: 30px;
+    height: 30px;
+}
+#tetris .left .keyboard .right {
+    position: absolute;
+    left: 60px;
+    top: 30px;
+    width: 30px;
+    height: 30px;
+}
+
+/* game over */
+
+#tetris-gameover {
+    position: absolute;
+    width:80px;
+	left:10px;
+    top: 42%;
+    text-align: center;
+    display: none;
+	
+    font: 11px verdana !important;
+    font-weight: bold !important;
+}
+
+/* next puzzle */
+#tetris-nextpuzzle {
+    position: absolute;
+    top: 41%;
+    overflow: visible;
+    display: none;	
+	width:100px;
+}
+
+/* stats */
+
+#tetris .left .stats {
+    position: absolute;
+    padding-left: 6px;
+    padding-top: 6px;
+	padding-bottom: 6px;
+	left: 0px;
+    bottom: 26px;
+	text-align:left;
+	background:#444;
+	width:100px;
+	overflow:hidden;
+	font:1px tahoma !important;
+}
+
+#tetris .stats td { padding-bottom: 1px; }
+
+#tetris .stats .level {font-size:10px;text-transform: uppercase; text-align: left; padding-right: 10px;
+	overflow:hidden; }
+#tetris-stats-level { margin-left:-7px;font-weight: bold;
+	overflow:hidden; }
+
+#tetris .stats .time { font-size:10px;text-transform: uppercase; text-align: left; padding-right: 10px;
+	overflow:hidden; }
+#tetris-stats-time { margin-left:-7px;font-weight: bold;
+	overflow:hidden; }
+
+#tetris .stats .apm { font-size:10px;text-transform: uppercase; text-align: left; padding-right: 10px; 
+	overflow:hidden;}
+#tetris-stats-apm { margin-left:-7px;font-weight: bold;
+	overflow:hidden; }
+
+#tetris .stats .lines { font-size:10px;text-transform: uppercase; text-align: left; padding-right: 10px;
+	overflow:hidden; }
+#tetris-stats-lines { margin-left:-7px;font-weight: bold;
+	overflow:hidden; }
+
+#tetris .stats .score { font-size:10px;text-transform: uppercase; text-align: left; padding-right: 12px;
+	overflow:hidden; }
+#tetris-stats-score { margin-left:-7px;font-weight: bold;
+	overflow:hidden; }
+
+/*** area ***/
+
+#tetris-area {
+    background: #FFFFFF;
+    position: absolute;
+    width: 252px; 
+    height: 462px;
+    left: 100px;
+	border-left:1px #FFF solid;
+    overflow: hidden;
+	background-image:url(grid.png);
+	background-position:-1px -1px;
+}
+#tetris .block0,
+#tetris .block1,
+#tetris .block2,
+#tetris .block3,
+#tetris .block4,
+#tetris .block5,
+#tetris .block6 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 0.5px solid #ffffff;
+    /* with margin 0.5px there were problems with offsetLeft and offsetTop */
+}
+#tetris .block0 {
+	background: #FF9326
+}
+#tetris .block1 {
+    background: #847DFF
+}
+#tetris .block2 {
+    background: #61DC1F
+}
+#tetris .block3 {
+    background: #D93E3E
+}
+#tetris .block4 {
+    background: #F863E1
+}
+#tetris .block5 {
+    background: #FFC617
+}
+#tetris .block6 {
+    background: #51DCFF
+}
+
+#tetris-nextpuzzle .block0{margin-left:20px !important;}
+#tetris-nextpuzzle .block1{margin-left:20px !important;}
+#tetris-nextpuzzle .block2{margin-left:20px !important;}
+#tetris-nextpuzzle .block3{margin-left:20px !important;}
+#tetris-nextpuzzle .block4{margin-left:20px !important;}
+#tetris-nextpuzzle .block5{margin-left:31px !important;}
+#tetris-nextpuzzle .block6{margin-left:9px !important;}
+
+#tetris-nextpuzzle .block0, 
+#tetris-nextpuzzle .block1, 
+#tetris-nextpuzzle .block2, 
+#tetris-nextpuzzle .block3, 
+#tetris-nextpuzzle .block4,
+#tetris-nextpuzzle .block5,
+#tetris-nextpuzzle .block6{
+	border-color:#333;
+}
+
+#hs_frame{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	width:100px;
+	height:26px;
+	background:#555;
+	overflow:hidden;
+}
+#hs{
+	text-align:left;
+	margin-top:6px;
+	margin-left:5px;font-size:10px;text-transform: uppercase;
+	overflow:hidden;
+}
+#h{
+	font-weight:bold;
+	overflow:hidden;
+	margin-left: 12px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<table cellspacing="0" cellpadding="0" width="100%" height="100%"><tr><td valign="middle">
+<div id="tetris">
+  <div class="left">
+  
+    <div id="logo"></div>
+    <div class="menu">
+      <div><input type="button" value="New Game" id="tetris-menu-start" class="button" /></div>
+      <div><input type="button" value="Reset" id="tetris-menu-reset" class="button" /></div>
+    </div>
+    <div class="keyboard">
+      <div class="up"><input type="button" value="^" id="tetris-keyboard-up" /></div>
+      <div class="down"><input type="button" value="v" id="tetris-keyboard-down" /></div>
+      <div class="left"><input type="button" value="<" id="tetris-keyboard-left" /></div>
+      <div class="right"><input type="button" value=">" id="tetris-keyboard-right" /></div>
+    </div>
+    <div id="tetris-nextpuzzle"></div>
+    <div id="tetris-gameover">Back to work now!</div>
+    <div class="stats">
+      <table cellspacing="0" cellpadding="0">
+      <tr>
+        <td class="level">Level</td>
+        <td><span id="tetris-stats-level">1</span></td>
+      </tr>
+      <tr>
+        <td class="score">Score</td>
+        <td><span id="tetris-stats-score">0</span></td>
+      </tr>
+      <tr>
+        <td class="lines">Lines</td>
+        <td><span id="tetris-stats-lines">0</span></td>
+      </tr>
+      <tr>
+        <td class="apm">APM</td>
+        <td><span id="tetris-stats-apm">0</span></td>
+      </tr>
+      <tr>
+        <td class="time">Time</td>
+        <td><span id="tetris-stats-time">0</span></td>
+      </tr>
+      </table>
+    </div>
+    <div id="hs_frame"><p id="hs">BEST <span id="h"></span></p></div>
+  </div>
+  <div id="tetris-area"></div>
+</div>
+
+</td></tr></table>
+
+<script type="text/javascript">
+  var tetris = new Tetris();
+  tetris.unit = 21;
+  tetris.areaX = 12;
+  tetris.areaY = 22;
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  
+  "name": "kolab Player",
+  "short": "Player",
+  
+  "description": "Play an external audio/video link",
+  "author": "Jay Machalani",
+  "version": "1.0",
+  
+  "resizable": true,
+  "aspect": true
+
+}

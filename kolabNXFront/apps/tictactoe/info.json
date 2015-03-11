@@ -1,0 +1,16 @@
+{
+  
+  "name": "kolab TicTacToe",
+  "short": "TicTacToe",
+  
+  "description": "Get three X's in a row",
+  "author": "Jay Machalani",
+  "version": "1.0",
+  
+  "width": 326,
+  "height": 386,
+  
+  "resizable": false,
+  "aspect": false
+
+}

@@ -1,0 +1,16 @@
+{
+  
+  "name": "@thekolabbird",
+  "short": "kolab Feed",
+  
+  "description": "The official kolab Twitter feed",
+  "author": "Twitter & Jay Machalani",
+  "version": "1.0",
+  
+  "width": 300,
+  "height": 400,
+  
+  "resizable": false,
+  "aspect": false
+
+}

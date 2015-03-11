@@ -1,0 +1,16 @@
+{
+  
+  "name": "kolab Sticky",
+  "short": "Sticky Note",
+  
+  "description": "Write on the side while you work",
+  "author": "Jay Machalani",
+  "version": "1.0",
+  
+  "width": 320,
+  "height": 260,
+  
+  "resizable": true,
+  "aspect": false
+
+}

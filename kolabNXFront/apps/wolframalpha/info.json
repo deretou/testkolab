@@ -1,0 +1,18 @@
+{
+  
+  "name": "Wolfram|Alpha",
+  "short": "Wolfram Alpha",
+  
+  "description": "Ask any question and get answers",
+  "author": "Wolfram & Jay Machalani",
+  "version": "1.0",
+  
+  "instructions": "Use the search box to get answers either an answer to a math problem, statistics or general knowledge.",
+  
+  "width": 420,
+  "height": 453,
+  
+  "resizable": false,
+  "aspect": false
+
+}

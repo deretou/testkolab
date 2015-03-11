@@ -1,0 +1,16 @@
+{
+  
+  "name": "OANDA Currency",
+  "short": "Currency",
+  
+  "description": "Easily convert worldwide currencies",
+  "author": "OANDA & Jay Machalani",
+  "version": "1.0",
+  
+  "width": 300,
+  "height": 97,
+  
+  "resizable": false,
+  "aspect": false
+
+}

@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>kolab TicTacToe</title>
+
+<script type="text/javascript" src="tictactoe.js"></script>
+
+<style>
+html,body{padding:0;margin:0;background:#EEE;overflow:hidden;}
+form{background:#EEE;overflow:hidden;}
+table{border:0;overflow:hidden;}
+#game{
+}
+#game td{border:#EEE 2px solid; background:#FFF;overflow:hidden;}
+#go{
+	width:102px;
+	height:40px;
+	padding-top: 11px;
+	font-size: 14px;
+	color: #333;
+	
+	font-weight:bold;
+	float:left;
+	border:0;
+	background:#FFF;
+	margin-left:5px;
+	margin-top:1px;
+	box-sizing:border-box;
+	font-family:tahoma;
+	text-align:center;
+	cursor:pointer;overflow:hidden;
+}
+#go:hover{
+	border:3px #EBEBEB solid;
+	padding-top:8px;
+}
+#go:active{
+	border:3px #333 solid;
+	padding-top:8px;overflow:hidden;
+}
+.a{padding:20px;}
+.a:hover{
+	opacity:0.9;
+}
+input{
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	color:#FFF;
+	border:0;
+	width:59px;
+	height:38px;
+	float:left;
+	padding-left:8px;
+	margin-top:1px;
+	margin-left:4px;
+	margin-right:1px;
+}
+#i1{
+	top:2px;
+	background:#FF0063
+}
+#i2{
+	top:113px;
+	background:#333
+}
+#i3{
+	width:58px;
+	top:223px;
+	background:#CCC
+}
+</style>
+
+</head>
+
+<body>
+
+<form name=game>
+<table id="game">
+<tr>
+<td><a href="javascript:yourChoice('A')"><img class="a" src="blank.png" border=0 height=60 width=60 name=A></a></td>
+<td><a href="javascript:yourChoice('B')"><img class="a" src="blank.png" border=0 height=60 width=60 name=B></a></td>
+<td><a href="javascript:yourChoice('C')"><img class="a" src="blank.png" border=0 height=60 width=60 name=C></a></td>
+</tr>
+<tr>
+<td><a href="javascript:yourChoice('D')"><img class="a" src="blank.png" border=0 height=60 width=60 name=D></a></td>
+<td><a href="javascript:yourChoice('E')"><img class="a" src="blank.png" border=0 height=60 width=60 name=E></a></td>
+<td><a href="javascript:yourChoice('F')"><img class="a" src="blank.png" border=0 height=60 width=60 name=F></a></td>
+</tr>
+<tr>
+<td><a href="javascript:yourChoice('G')"><img class="a" src="blank.png" border=0 height=60 width=60 name=G></a></td>
+<td><a href="javascript:yourChoice('H')"><img class="a" src="blank.png" border=0 height=60 width=60 name=H></a></td>
+<td><a href="javascript:yourChoice('I')"><img class="a" src="blank.png" border=0 height=60 width=60  name=I></a></td>
+</tr>
+</table>
+
+<input id="i1" type=text size=5 name=you>
+<input id="i2" type=text size=5 name=computer>
+<input id="i3" type=text size=5 name=ties>
+<div id="go" onClick="playAgain();">Start</div>
+</form>
+
+</body>
+</html>

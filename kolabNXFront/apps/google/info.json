@@ -1,0 +1,16 @@
+{
+  
+  "name": "Google Web Search",
+  "short": "Google Search",
+  
+  "description": "Always be ready for a Google search",
+  "author": "Google & Jay Machalani",
+  "version": "1.0",
+  
+  "width": 339,
+  "height": 44,
+  
+  "resizable": false,
+  "aspect": false
+
+}

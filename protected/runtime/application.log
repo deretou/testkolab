@@ -1,0 +1,38 @@
+2014/01/17 15:19:28 [error] [php] Undefined index: location (D:\KolabNX_Dev\kolabNX\protected\controllers\UserauthentificationController.php:476)
+Stack trace:
+#0 D:\KolabNX_Dev\yii\framework\web\filters\CFilterChain.php(133): UserauthentificationController->runAction()
+#1 D:\KolabNX_Dev\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 D:\KolabNX_Dev\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 D:\KolabNX_Dev\yii\framework\web\filters\CInlineFilter.php(58): UserauthentificationController->filterAccessControl()
+#4 D:\KolabNX_Dev\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 D:\KolabNX_Dev\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 D:\KolabNX_Dev\yii\framework\web\CController.php(265): UserauthentificationController->runActionWithFilters()
+#7 D:\KolabNX_Dev\yii\framework\web\CWebApplication.php(282): UserauthentificationController->run()
+#8 D:\KolabNX_Dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\KolabNX_Dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\KolabNX_Dev\kolabNX\index.php(13): CWebApplication->run()
+REQUEST_URI=/kolabNX/index.php/userauthentification/getImageWidth
+in D:\KolabNX_Dev\kolabNX\protected\controllers\UserauthentificationController.php (476)
+in D:\KolabNX_Dev\kolabNX\index.php (13)
+2014/01/17 15:22:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "protected/data/userProfilImage/resize_.jpg".' in D:\KolabNX_Dev\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\KolabNX_Dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('protected/data/...')
+#1 D:\KolabNX_Dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\KolabNX_Dev\kolabNX\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kolabNX/index.php/protected/data/userProfilImage/resize_.jpg
+---
+2014/01/17 15:49:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "protected/data/userProfilImage/resize_.jpg".' in D:\KolabNX_Dev\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\KolabNX_Dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('protected/data/...')
+#1 D:\KolabNX_Dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\KolabNX_Dev\kolabNX\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kolabNX/index.php/protected/data/userProfilImage/resize_.jpg
+---
+2015/01/09 16:00:01 [error] [system.db.CDbCommand] Error in preparing SQL: DELETE FROM 'YiiSession' WHERE expire<:expire
+in D:\KolabNX_Dev\KolabNX\protected\controllers\SiteController.php (35)
+in D:\KolabNX_Dev\KolabNX\index.php (13)
+2015/01/09 16:00:01 [error] [system.db.CDbCommand] CDbCommand::execute() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such table: YiiSession. The SQL statement executed was: DELETE FROM 'YiiSession' WHERE expire<:expire.
+in D:\KolabNX_Dev\KolabNX\protected\controllers\SiteController.php (35)
+in D:\KolabNX_Dev\KolabNX\index.php (13)

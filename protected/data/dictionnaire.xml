@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dictionnaire>         
+         <item nom="login_colla">
+		<lang nom="en">Collaborate</lang>
+		
+	 </item>
+         <item nom="login_commu">
+		<lang nom="en">Communicate</lang>              
+		
+	 </item>
+         <item nom="login_perf">
+		<lang nom="en">Perform.</lang>
+		
+	 </item>
+          <item nom="login_exp">
+		<lang nom="en">kolab is a social collaboration platform for students, teachers and professionals. Easily work in teams in our real-time editor, video chat with your teamates, stay up-to-date at all time and keep track of reviews.</lang>
+		
+	 </item>
+         <item nom="login_disco">
+		<lang nom="en">Discover kolab</lang>
+		
+	 </item>
+          <item nom="login_user_email">
+		<lang nom="en">Username or Email</lang>
+		
+	 </item>
+         <item nom="login_pass">
+		<lang nom="en">Password</lang>
+		
+	 </item>
+         <item nom="login_signin">
+		<lang nom="en">Sign In</lang>
+		
+	 </item>
+          <item nom="login_keepme">
+		<lang nom="en">Keep me logged in</lang>
+		
+	 </item>
+          <item nom="login_forget">
+		<lang nom="en">Forgot my password</lang>
+		
+	  </item>
+          <item nom="login_create">
+		<lang nom="en">Create an account</lang>
+		
+	  </item>
+           <item nom="login_enteremail">
+		<lang nom="en">Enter your email address</lang>
+		
+	  </item>
+          <item nom="main_discon">
+		<lang nom="en">Disconnect</lang>
+		
+	  </item>
+          <item nom="main_logout">
+		<lang nom="en">Sign out of kolab</lang>
+		
+	  </item>
+          <item nom="backstore_activity">
+		<lang nom="en">Activity</lang>
+		
+	  </item>
+          <item nom="backstore_profilpic">
+		<lang nom="en">Profile picture</lang>
+		
+	  </item>
+          
+         <!--item nom="warning_phone_tablet">
+		<lang nom="fr">AVERTISSEMENT: kolab n'est pas optimisé pour les téléphones et les tablettes!</lang>
+		<lang nom="en">WARNING: kolab is not optimized for phones and tablets!</lang>		
+	 </item-->
+         
+         
+	
+</dictionnaire>

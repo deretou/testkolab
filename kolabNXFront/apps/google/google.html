@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Google Web Search</title>
+
+<style>
+html,body{padding:0;margin:0;background:#333;overflow:hidden;}
+::selection{
+	color:#FFF;
+	background:#4585F1;
+	border:6px #4585F1 solid;
+	padding:5px;overflow:hidden;
+}
+
+#box{overflow:hidden;
+}
+img{
+	width:44px;
+	height:44px;
+	cursor:pointer;overflow:hidden;
+}
+img:active{
+	width:40px;
+	height:40px;
+	border:2px solid #4585F1;overflow:hidden;
+}
+input{
+	height: 44px;
+width: 280px;
+border: 0;
+padding: 0;
+margin: 0;
+position: absolute;
+left: 44px;
+padding-left: 15px;
+margin-top: -1px;
+padding-bottom: 1px;
+font-family: tahoma;
+font-size: 14px;
+color: #222;overflow:hidden;outline:0;
+}
+input:focus{outline:0;}
+</style>
+
+</head>
+
+<body>
+<div id="box">
+<img src="logo.png" onClick="window.open('http://www.google.com/search?q=' + encodeURIComponent(document.getElementById('textbox').value));"/>
+<input id="textbox" type="text" placeholder="" onkeydown="if (event.keyCode == 13 || event.which == 13) { window.open('http://www.google.com/search?q=' + encodeURIComponent(document.getElementById('textbox').value));}" />
+</div>
+</body>
+</html>

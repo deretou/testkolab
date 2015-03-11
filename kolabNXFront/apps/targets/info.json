@@ -1,0 +1,18 @@
+{
+  
+  "name": "kolab Targets",
+  "short": "Targets",
+  
+  "description": "Hit as many targets in 30 seconds",
+  "author": "Jay Machalani",
+  "version": "1.0",
+  
+  "instructions": "One point for each target hit and you lose a point for each wrong hit.",
+  
+  "width": 334,
+  "height": 313,
+  
+  "resizable": false,
+  "aspect": false
+
+}

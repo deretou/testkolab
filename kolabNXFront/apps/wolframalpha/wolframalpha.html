@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Wolfram|Alpha Widget</title>
+
+<style>
+html,body{padding:0;margin:0;background:#FFF;overflow:hidden}
+.searchwaw{color:#FFF !important;background:#D81921 !important;}
+.searchfie{width:320px !important;padding:3px 5px !important;border-color:#FFF !important;}
+.searchfie:focus{outline-color:#D81921 !important;}
+.fixtop{}
+.fixtop2{background:#F58120 !important;height: 46px !important;}
+.fixbottom{background:#F5F5F5 !important;height: 34px !important;}
+body{display:none;}
+
+</style>
+
+</head>
+
+<body>
+
+<script type="text/javascript" id="WolframAlphaScript65a1fe245c2acebb361bfeeea49504ae" src="http://www.wolframalpha.com/widget/widget.jsp?id=65a1fe245c2acebb361bfeeea49504ae&output=iframeOpenExpand&width=420&height=370"></script>
+
+<script type="text/javascript">
+function kolabWA(){
+	$('#i0').val('');
+	$('.WolframAlphaWidgetLarge').css({width:'100%',height:'100%'});
+	$('.wolframAlphaWidgetBeta').hide();
+	$('.wolframAlphaWidgetBody').css({border:0}).addClass('fixtop2');
+	$('.wolframAlphaWidgetBody fieldset').css({padding:0})
+	$('.wolframAlphaWidgetBody input').addClass('searchfie');
+	$('.wolframAlphaWidgetOutput').css({border:0});
+	$('.WolframAlphaWidgetLarge').css({marginTop:0});
+	$('.waw_header').remove();
+	$('.wolframAlphaWidgetContent').css({marginTop:1,marginLeft:9});
+	$('.wolframAlphaWidgetContent .l').addClass('searchwaw');
+	$('.wolframAlphaWidgetContent .m').addClass('searchwaw');
+	$('.wolframAlphaWidgetContent .r').addClass('searchwaw');
+	$('.waWidgetFooter').addClass('fixbottom');
+	$('.waWidgetFooter .l').addClass('fixbottom');
+	$('.waWidgetFooter .r').addClass('fixbottom');
+	$('.wolframAlphaWidgetInfo').css({bottom:9});
+	$('.wolframAlphaWidgetShare').css({bottom:9});
+	$('.logo').css({bottom:7});
+	$('.equal').css({bottom:10});
+	$('.wawf_rate a').remove();
+	$('.expander').remove();
+	$('.waWidgetFooter').css({margin:'0px 16px'});
+	$('.wolframAlphaWidgetComputingOverlay').css('opacity','0.35');
+	$('.wolframAlphaWidgetComputingOverlay').hide();
+	$('#i0').val('');
+	$('body').fadeIn(50);
+	
+	$('#i0').keydown(function (e){
+		if(e.keyCode == 13){
+		   $('.wolframAlphaWidgetComputingOverlay').fadeIn(120);
+		}
+	});
+	
+	$('.searchwaw').click(function (e){
+		   $('.wolframAlphaWidgetComputingOverlay').fadeIn(120);
+	});
+}
+
+setTimeout(function(){kolabWA();},150);
+	$(document).ready(function(e) {
+	$('#i0').val('');
+        
+    });
+
+</script>
+
+</body>
+</html>
